@@ -1,0 +1,14 @@
+extends layout
+//- pug파일 이름은 소문자여야함!
+//- block 은 여러개 만들 수 있고 만들어진 이름이 같아야함
+//- 파일 이름에 .pug를 붙이지 않아도 알아서 찾음
+include mixins/mixintest
+//- mixin도 일종의 템플릿. 변수를 넣어야 할때 사용
+
+block content 
+    h6 layout에서 짜여진 블럭에 작성중
+    div 컨트롤러에서 렌더링 된 #{variable}
+    each aa in mixintest
+        +makemixin(aa)
+
+//- iteration 과 mixin이 혼합된 형태

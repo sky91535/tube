@@ -1,0 +1,13 @@
+doctype html
+html(lang="ko")
+    include partials/head.pug
+    include partials/header.pug
+    
+    body 
+        h4 layout.pug에서 불러오는 기본 베이스
+        block content
+        h1=pageTitle 
+
+//- head에선 변수를 사용할때 #{}를 써야했지만 body부분에선 =변수이름 을 쓰면 자동 사용됨
+        
+

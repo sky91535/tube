@@ -4,6 +4,7 @@ import express from "express";
 // 외부 파일에 존재하는 컨트롤러를 import 해옴 (defalut로 export된 파일과 다르게 원래 이름만 써줘야함. 이름 변경 불가능)
 // 여러개를 한번에 import 할땐 {}안에 작성
 import { Main ,Home, topID, bottomID } from "../controller/mainController";
+// 현재 위치에서 상위 폴더로 이동할땐 - ../  하위 폴더는 - ./
 
 // 라우터 만들기
 const mainRouter = express.Router();
