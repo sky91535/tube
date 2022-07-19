@@ -7,6 +7,9 @@ import express from "express";
 import mainRouter from "./router/mainRouter";
 import serveRouter from "./router/serveRouter";
 
+// 함수가 아닌 파일 자체를 import
+import "./db";
+
 const PORT = 9875;
 const app = express();
 
@@ -38,5 +41,5 @@ app.get("/",testHome);
 
 
 //서버가 활성화 되도록 + 콘솔 표시
-const serverListen = () => console.log("Working!!!");
+const serverListen = () => console.log("Server is Working!!!");
 app.listen(PORT,serverListen);
